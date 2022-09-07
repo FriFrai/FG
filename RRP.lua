@@ -76,10 +76,8 @@ if game.PlaceId == 9809240583 then
 			local N=game:GetService("VirtualInputManager")
 			N:SendKeyEvent(true,"E",false,game)
 			wait(10)
-
-			if game:GetService("Players").LocalPlayer.PlayerGui["A-Chassis Interface"].Car.Value ~= "Caminhao" then
 				while _G.farmando do wait()
-					for _,v in pairs(game:GetService("Workspace").Construcoes.Caminhoneiro:GetDescendants()) do
+					for _,v in pairs(game:GetService("Workspace"):GetDescendants()) do
 						if v:IsA("TouchTransmitter") then
 							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
 							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
