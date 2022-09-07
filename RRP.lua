@@ -76,11 +76,10 @@ if game.PlaceId == 9809240583 then
 			local N=game:GetService("VirtualInputManager")
 			N:SendKeyEvent(true,"E",false,game)
 			wait(10)
-				while _G.farmando do wait(0.10)
-					for _,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-						if v:IsA("TouchTransmitter") then
-							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+				for _,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+					if v:IsA("Part") and v.Name == "ZonaVerde" then
+						firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
+						firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1)
 					end
 				end
 			end
